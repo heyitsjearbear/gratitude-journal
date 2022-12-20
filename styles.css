@@ -1,0 +1,42 @@
+:root{
+    --mountBattenPink: #98798E;
+    --silverPink: #C5AEAB;
+    --dustStorm: #E9CFCC;
+    --pinkLavender: #D9B9C7;
+    --paleChestnut: #D9AABA;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.main{
+    margin: 20px 10px 0 10px;
+}
+input, button{
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+#entry{
+    border: 1px solid black;
+}
+button{
+    border: .5px solid black;
+    padding: 5px 9px;
+}
+
+body{
+    background-color: var(--silverPink);
+}
+.title{
+    padding-bottom: 1.5rem;
+}
+#call-action, #prompt{
+    padding-bottom: 0.5rem;
+}
