@@ -8,7 +8,7 @@ let prompt = document.querySelector("#prompt");
 window.addEventListener("load", () => {
   textBox.value = "";
   //localStorage.clear();
-  document.querySelector('.entries').innerHTML = localStorage.getItem("page");
+  document.querySelector(".entries").innerHTML = localStorage.getItem("page");
   let edit = document.querySelectorAll(".edit");
   edit.forEach((button) => {
     button.addEventListener("click", () => {
@@ -24,14 +24,25 @@ window.addEventListener("load", () => {
           ).readOnly = true;
           button.parentElement.parentElement.querySelector(
             ".answer"
-          ).innerHTML = button.parentElement.parentElement.querySelector(
-            ".answer"
-          ).value;
+          ).innerHTML =
+            button.parentElement.parentElement.querySelector(".answer").value;
           console.log("saving edit");
           localStorage.clear();
-          localStorage.setItem("page", document.querySelector(".entries").innerHTML.toString());
+          localStorage.setItem(
+            "page",
+            document.querySelector(".entries").innerHTML.toString()
+          );
           console.log(localStorage.getItem("page"));
         });
+    });
+  });
+  let deleteBtnArr = document.querySelectorAll(".delete");
+  deleteBtnArr.forEach((button) => {
+    button.addEventListener("click", () => {
+      console.log("delete button clicked");
+      button.parentElement.parentElement.remove();
+      localStorage.clear();
+      localStorage.setItem("page", document.querySelector(".entries").innerHTML.toString());
     });
   });
 });
@@ -96,17 +107,31 @@ submitBtn.addEventListener("click", () => {
           ).readOnly = true;
           button.parentElement.parentElement.querySelector(
             ".answer"
-          ).innerHTML = button.parentElement.parentElement.querySelector(
-            ".answer"
-          ).value;
+          ).innerHTML =
+            button.parentElement.parentElement.querySelector(".answer").value;
           console.log("saving edit");
           localStorage.clear();
-          localStorage.setItem("page", document.querySelector(".entries").innerHTML.toString());
+          localStorage.setItem(
+            "page",
+            document.querySelector(".entries").innerHTML.toString()
+          );
           console.log(localStorage.getItem("page"));
         });
     });
   });
   console.log("saving submission");
-  localStorage.setItem("page", document.querySelector(".entries").innerHTML.toString());
+  localStorage.setItem(
+    "page",
+    document.querySelector(".entries").innerHTML.toString()
+  );
   console.log(localStorage.getItem("page"));
+  let deleteBtnArr = document.querySelectorAll(".delete");
+  deleteBtnArr.forEach((button) => {
+    button.addEventListener("click", () => {
+      console.log("delete button clicked");
+      button.parentElement.parentElement.remove();
+      localStorage.clear();
+      localStorage.setItem("page", document.querySelector(".entries").innerHTML.toString());
+    });
+  });
 });
