@@ -70,10 +70,20 @@ body {
   margin-bottom: 10px;
 }
 
-.date, .prompt-title, .answer{
-    margin-bottom: .5rem;
+.date,
+.prompt-title,
+.answer {
+  margin-bottom: 0.5rem;
 }
-#call-action{
-    display: flex;
-    justify-content: center;
+#call-action {
+  display: flex;
+  justify-content: center;
+}
+
+.answer {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  resize: none;
 }
