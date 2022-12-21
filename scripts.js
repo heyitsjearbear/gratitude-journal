@@ -7,6 +7,33 @@ let prompt = document.querySelector("#prompt");
 //event listeners
 window.addEventListener("load", () => {
   textBox.value = "";
+  //localStorage.clear();
+  document.querySelector('.entries').innerHTML = localStorage.getItem("page");
+  let edit = document.querySelectorAll(".edit");
+  edit.forEach((button) => {
+    button.addEventListener("click", () => {
+      console.log("edit button clicked");
+      button.parentElement.parentElement.querySelector(
+        ".answer"
+      ).readOnly = false;
+      button.parentElement.parentElement
+        .querySelector(".answer")
+        .addEventListener("blur", () => {
+          button.parentElement.parentElement.querySelector(
+            ".answer"
+          ).readOnly = true;
+          button.parentElement.parentElement.querySelector(
+            ".answer"
+          ).innerHTML = button.parentElement.parentElement.querySelector(
+            ".answer"
+          ).value;
+          console.log("saving edit");
+          localStorage.clear();
+          localStorage.setItem("page", document.querySelector(".entries").innerHTML.toString());
+          console.log(localStorage.getItem("page"));
+        });
+    });
+  });
 });
 addEntryBtn.addEventListener("click", () => {
   window.scrollTo(0, 0);
@@ -67,7 +94,19 @@ submitBtn.addEventListener("click", () => {
           button.parentElement.parentElement.querySelector(
             ".answer"
           ).readOnly = true;
+          button.parentElement.parentElement.querySelector(
+            ".answer"
+          ).innerHTML = button.parentElement.parentElement.querySelector(
+            ".answer"
+          ).value;
+          console.log("saving edit");
+          localStorage.clear();
+          localStorage.setItem("page", document.querySelector(".entries").innerHTML.toString());
+          console.log(localStorage.getItem("page"));
         });
     });
   });
+  console.log("saving submission");
+  localStorage.setItem("page", document.querySelector(".entries").innerHTML.toString());
+  console.log(localStorage.getItem("page"));
 });
