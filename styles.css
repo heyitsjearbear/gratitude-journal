@@ -73,3 +73,7 @@ body {
 .date, .prompt-title, .answer{
     margin-bottom: .5rem;
 }
+#call-action{
+    display: flex;
+    justify-content: center;
+}
