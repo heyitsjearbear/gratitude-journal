@@ -3,7 +3,11 @@ let addEntryBtn = document.querySelector('.add-prompt-button');
 let submitBtn = document.querySelector('.submit-button');
 let textBox = document.querySelector('#entry');
 let prompt = document.querySelector('#prompt');
+console.log(submitBtn.innerHTML);
 //event listeners
+window.addEventListener("load", () => {
+    document.querySelector('.entries').innerHTML = localStorage.getItem("page-state");
+});
 addEntryBtn.addEventListener("click", () => {
     window.scrollTo(0, 0);
 });
@@ -46,6 +50,7 @@ submitBtn.addEventListener("click", () => {
     itemEntry.className = "item-entry";
     itemEntry.appendChild(entryCard);
     itemEntry.appendChild(actions);
-    document.querySelector('.entry-list').appendChild(itemEntry);
+    document.querySelector('.entries').appendChild(itemEntry);
+    localStorage.setItem('page-state', document.querySelector('.entries').innerHTML.toString());
     textBox.value = '';
 });
