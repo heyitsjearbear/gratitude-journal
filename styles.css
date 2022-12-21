@@ -1,52 +1,71 @@
-:root{
-    --mountBattenPink: #98798E;
-    --silverPink: #C5AEAB;
-    --dustStorm: #E9CFCC;
-    --pinkLavender: #D9B9C7;
-    --paleChestnut: #D9AABA;
+:root {
+  --mountBattenPink: #98798e;
+  --silverPink: #c5aeab;
+  --dustStorm: #e9cfcc;
+  --pinkLavender: #d9b9c7;
+  --paleChestnut: #d9aaba;
 }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-    font-family: 'Ubuntu', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
 }
 
-.main{
-    margin: 20px 10px 0 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.main {
+  margin: 20px 10px 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-h3{
-    font-size: 1rem;
+h3 {
+  font-size: 1rem;
 }
-input, button{
-    appearance: none;
-    border: none;
-    outline: none;
-    background: none;
-    cursor: pointer;
+input,
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
 }
-#entry{
-    border: 1px solid black;
+#entry {
+  border: 1px solid black;
 }
-button{
-    border: .5px solid black;
-    padding: 5px 9px;
+button {
+  border: 0.5px solid black;
+  padding: 5px 9px;
+  border-radius: 5px;
 }
 
-body{
-    background-color: var(--silverPink);
+body {
+  background-color: var(--silverPink);
 }
-.title{
-    padding-bottom: 1.5rem;
+.title {
+  padding-bottom: 1.5rem;
 }
-#call-action, #prompt{
-    padding-bottom: 0.5rem;
+#call-action,
+#prompt {
+  padding-bottom: 0.5rem;
 }
-.entry-list{
-    padding-top: 1.5rem;
+.entry-list {
+  padding-top: 1.5rem;
 }
+.item-entry {
+  margin-bottom: 3rem;
+}
+
+#entry-list-title {
+  margin-bottom: 1.5rem;
+}
+.add-prompt-button {
+  float: right;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  margin-right: 10px;
+  background-color: var(--paleChestnut);
+}
+
