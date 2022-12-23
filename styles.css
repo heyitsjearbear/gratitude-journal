@@ -35,7 +35,9 @@
   box-sizing: border-box;
   font-family: "Ubuntu", sans-serif;
 }
-
+main{
+    min-height: 100vh;
+}
 .main {
   margin: 20px 10px 0 10px;
   display: flex;
@@ -150,4 +152,18 @@ body {
     margin-right: 150px;
     font-size: 1.5rem;
    }
+   .entry-list{
+    width: 400px;
+   }
+}
+footer{
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+#github-img{
+  padding-left: 15px;
+  width: 35px;
 }
