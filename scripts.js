@@ -40,9 +40,12 @@ window.addEventListener("load", () => {
   deleteBtnArr.forEach((button) => {
     button.addEventListener("click", () => {
       console.log("delete button clicked");
-      button.parentElement.parentElement.remove();
-      localStorage.clear();
-      localStorage.setItem("page", document.querySelector(".entries").innerHTML.toString());
+      button.parentElement.parentElement.style.opacity = "0";
+      setTimeout(() => {
+        button.parentElement.parentElement.remove();
+        localStorage.clear();
+        localStorage.setItem("page", document.querySelector(".entries").innerHTML.toString());
+      },1000);
     });
   });
 });
@@ -129,9 +132,12 @@ submitBtn.addEventListener("click", () => {
   deleteBtnArr.forEach((button) => {
     button.addEventListener("click", () => {
       console.log("delete button clicked");
-      button.parentElement.parentElement.remove();
-      localStorage.clear();
-      localStorage.setItem("page", document.querySelector(".entries").innerHTML.toString());
+      button.parentElement.parentElement.style.opacity = "0";
+      setTimeout(() => {
+        button.parentElement.parentElement.remove();
+        localStorage.clear();
+        localStorage.setItem("page", document.querySelector(".entries").innerHTML.toString());
+      },1000);
     });
   });
 });

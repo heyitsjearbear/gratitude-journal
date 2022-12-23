@@ -6,6 +6,18 @@
   --paleChestnut: #d9aaba;
 }
 
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -41,6 +53,7 @@ button {
 }
 
 body {
+  animation: transitionIn 0.75s;
   background-color: var(--silverPink);
 }
 .title {
@@ -55,6 +68,9 @@ body {
 }
 .item-entry {
   margin-bottom: 3rem;
+  background-color: rgba(255, 255, 255,.5);
+  border-radius: 5px;
+  transition: opacity 2s;
 }
 
 #entry-list-title {
@@ -73,6 +89,7 @@ body {
 .date,
 .prompt-title,
 .answer {
+  padding-top: .5rem;
   margin-bottom: 0.5rem;
 }
 #call-action {
@@ -86,4 +103,14 @@ body {
   outline: none;
   background: none;
   resize: none;
+}
+.entry-card, .actions{
+  margin: 1rem;
+}
+
+.actions{
+  padding-bottom: 1rem;
+}
+.edit{
+  margin-right: .6rem;
 }
