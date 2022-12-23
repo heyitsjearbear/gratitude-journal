@@ -45,7 +45,7 @@ window.addEventListener("load", () => {
         button.parentElement.parentElement.remove();
         localStorage.clear();
         localStorage.setItem("page", document.querySelector(".entries").innerHTML.toString());
-      },1000);
+      },500);
     });
   });
 });
@@ -137,7 +137,7 @@ submitBtn.addEventListener("click", () => {
         button.parentElement.parentElement.remove();
         localStorage.clear();
         localStorage.setItem("page", document.querySelector(".entries").innerHTML.toString());
-      },1000);
+      },500);
     });
   });
 });
