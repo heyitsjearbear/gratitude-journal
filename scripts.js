@@ -100,6 +100,10 @@ addEntryBtn.addEventListener("click", () => {
 });
 submitBtn.addEventListener("click", () => {
   console.log("submit button clicked");
+  if (textBox.value == "") {
+    console.log("nothing to sumbit");
+    return;
+  }
   console.log(textBox.value);
   let deleteBtn = document.createElement("button");
   deleteBtn.textContent = "Delete";
