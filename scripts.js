@@ -40,16 +40,18 @@ const getPrompt = () => {
   return prompts[Math.floor(Math.random()*prompts.length)];
 }
 
-
-
 //query selectors
 let addEntryBtn = document.querySelector(".add-prompt-button");
 let submitBtn = document.querySelector(".submit-button");
 let textBox = document.querySelector("#entry");
 let prompt = document.querySelector("#prompt");
-//document.querySelector('.entries') = localStorage.getItem("page");
+let changePromptBtn = document.querySelector("#change-prompt");
+changePromptBtn.addEventListener("click", () => {
+  prompt.innerHTML = getPrompt();
+});
 //event listeners
 window.addEventListener("load", () => {
+  prompt.innerHTML = getPrompt();
   textBox.value = "";
   //localStorage.clear();
   document.querySelector(".entries").innerHTML = localStorage.getItem("page");
