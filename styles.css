@@ -18,6 +18,17 @@
   }
 }
 
+@keyframes deleteTransition {
+  from {
+    opacity: 100;
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
