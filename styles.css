@@ -144,3 +144,10 @@ body {
 #prompt{
   text-align: center;
 }
+
+@media (min-width: 950px) {
+   .add-prompt-button{
+    margin-right: 150px;
+    font-size: 1.5rem;
+   }
+}
