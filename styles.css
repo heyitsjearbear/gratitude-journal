@@ -82,6 +82,7 @@ body {
   background-color: rgba(255, 255, 255,.5);
   border-radius: 5px;
   transition: opacity .5s;
+  display: inline-block;
 }
 
 #entry-list-title {
@@ -124,4 +125,22 @@ body {
 }
 .edit{
   margin-right: .6rem;
+}
+
+.submit-button:hover:enabled,
+.submit-button:focus:enabled,
+.edit:hover:enabled,
+.edit:focus:enabled,
+.delete:hover:enabled,
+.delete:focus:enabled,
+#change-prompt:hover:enabled,
+#change-prompt:focus:enabled,
+.add-prompt-button:hover:enabled,
+.add-prompt-button:focus:enabled {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+
+.entry-box{
+  margin-bottom: 26.16px;
 }
