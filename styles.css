@@ -50,7 +50,9 @@ h3 {
 }
 input,
 button {
+  -webkit-appearance: none;
   appearance: none;
+  -moz-appearance: none;
   border: none;
   outline: none;
   background: none;
